@@ -1,9 +1,25 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import { IProduct } from '../../models/productModel';
+import { IProductModel } from '../../models/productModel';
+
+// SRP: Komponent som innehåller grund produktens properties.
+
+// OCP: Komponenten kan utökas utan att modifieras eller sluta
+// fungera. Vi kan utöka innehållet med hjälp av composition
+// då vi kan skicka in valfri och frivillig komponent med properties
+// för en speciell produkt(details?).
+
+// LSP: Det här är bas produkten och alla produkter använder
+// den här komponenten som bas och utökas med hjälp av
+// composition i form utav att valfri React.ReactNode "details?".
+
+// ISP: Vi använder IProductProps för att få in rätt information.
+// IProductProps använder i sin tur sig utav IProduct interface 
+// och valfri react komponent/React.ReactNode för att utöka med 
+// fler properties men endast de som behövs.
 
 interface IProductProps {
-    product: IProduct;
+    product: IProductModel;
     details?: React.ReactNode;
 }
 

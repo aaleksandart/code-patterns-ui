@@ -1,5 +1,9 @@
 import { Link, Outlet } from 'react-router-dom'
 
+// SRP: Komponent som visar vår navbar.
+
+// OCP: Kan utökas utan att modifieras eller krasha.
+
 const navbar = () => {
     return (
         <>

@@ -1,3 +1,8 @@
+// SRP: Vy för att visa vår home page.
+
+// OCP: Kan utökas med funktionalitet genom att lägga
+// till fler komponenter.
+
 const homeView = () => {
     const picCoat = require('../assets/images/coat.jpg')
     const picConverse = require('../assets/images/converse.jpg')
